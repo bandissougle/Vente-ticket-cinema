@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+		
+		<bean id="seanceDao" class="com.billet.mvc.dao.impl.SeanceDaoImpl" />
+		<bean id="seanceService" class="com.billet.mvc.services.impl.SeanceServiceImpl">
+			<property name="dao" ref="seanceDao"></property>
+		</bean>
+		
+		<bean id="filmdao" class="com.billet.mvc.dao.impl.FilmDaoImpl" />
+		<bean id="filmService" class="com.billet.mvc.services.impl.FilmServiceImpl">
+			<property name="dao" ref="filmdao"></property>
+		</bean>
+		
+		<bean id="administrateurdao" class="com.billet.mvc.dao.impl.AdministrateurDaoImpl" />
+		<bean id="administrateurService" class="com.billet.mvc.services.impl.AdministrateurServiceImpl">
+			<property name="dao" ref="administrateurdao"></property>
+		</bean>
+		
+		<bean id="clientdao" class="com.billet.mvc.dao.impl.ClientDaoImpl" />
+		<bean id="clientService" class="com.billet.mvc.services.impl.ClientServiceImpl">
+			<property name="dao" ref="clientdao"></property>
+		</bean>
+		
+		<bean id="commandedao" class="com.billet.mvc.dao.impl.CommandeDaoImpl" />
+		<bean id="commandeService" class="com.billet.mvc.services.impl.CommandeServiceImpl">
+			<property name="dao" ref="commandedao"></property>
+		</bean>
+		
+		<bean id="inscriptiondao" class="com.billet.mvc.dao.impl.InscriptionDaoImpl" />
+		<bean id="inscriptionService" class="com.billet.mvc.services.impl.InscriptionServiceImpl">
+			<property name="dao" ref="inscriptiondao"></property>
+		</bean>
+		
+		<bean id="ligneCommandedao" class="com.billet.mvc.dao.impl.LigneCommandeDaoImpl" />
+		<bean id="ligneCommandeService" class="com.billet.mvc.services.impl.LigneCommandeServiceImpl">
+			<property name="dao" ref="ligneCommandedao"></property>
+		</bean>
+		
+		<bean id="lignePaiementdao" class="com.billet.mvc.dao.impl.LignePaiementDaoImpl" />
+		<bean id="lignePaiementService" class="com.billet.mvc.services.impl.LignePaiementServiceImpl">
+			<property name="dao" ref="lignePaiementdao"></property>
+		</bean>
+		
+		<bean id="paiementdao" class="com.billet.mvc.dao.impl.PaiementDaoImpl" />
+		<bean id="paiementService" class="com.billet.mvc.services.impl.PaiementServiceImpl">
+			<property name="dao" ref="paiementdao"></property>
+		</bean>
+		
+		<bean id="utilisateurdao" class="com.billet.mvc.dao.impl.UtilisateurDaoImpl" />
+		<bean id="utilisateurService" class="com.billet.mvc.services.impl.UtilisateurServiceImpl">
+			<property name="dao" ref="utilisateurdao"></property>
+		</bean>
+</beans>
